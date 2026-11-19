@@ -1,26 +1,32 @@
+
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="pt-br">
-
+ 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Fale Conosco</title>
+    <title>Fale Conosco - Radioamadorismo</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
+    <style>
+        #mainHeading { margin-top: 50px; }
+        .btn-enviar { color: var(--bs-light); background: var(--bs-black); }
+        .btn-enviar:hover, .btn-enviar:focus { color: var(--bs-light); background: #333; }
+    </style>
 </head>
-
+ 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container"><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="container"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Alternar navegação"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="post.html">O que é</a></li>
+                    <li class="nav-item"><a class="nav-link" href="links.html">Saiba mais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagens.html">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fale_conosco.html">Fale conosco</a></li>
                 </ul>
             </div>
         </div>
@@ -31,50 +37,81 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 position-relative mx-auto">
                     <div class="site-heading">
-                        <h1 style="margin-top: 50px;">Fale Conosco</h1><span class="subheading">Ficou alguma dúvida? Temos as respostas.</span>
+                        <h1 id="mainHeading">Fale Conosco</h1><span class="subheading">Ficou alguma dúvida? Temos as respostas.</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-lg-10 mx-auto">
-                <p>Ficou com vontade de se tornar um radiamador e ainda está em dúvida de por onde começar ou precisa de ajuda para atualizar sua classe? Preencha os campos abaixo e nos envie sua mensagem! Entraremos em contato o quanto antes!</p>
-                <form id="contactForm" name="sentMessage">
-                    <div>
-                        <div class="mb-3 form-floating"><input class="form-control" type="text" id="name" required="" placeholder="Name"><label class="form-label" for="name">Nome</label><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div>
-                        <div class="mb-3 form-floating"><input class="form-control" type="email" id="email" required="" placeholder="Email Address"><label class="form-label">E-mail</label><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div>
-                        <div class="mb-3 form-floating"><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number"><label class="form-label">Número de Telefone</label><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <p>Qual tipo de ajuda precisa?</p>
-                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Conseguir meu&nbsp;COER&nbsp;</label></div>
-                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Atualizar classe&nbsp;</label></div>
-                    <p>Qual a classe de radioamador pretendida?</p>
-                    <div class="form-check"><input class="form-check-input" type="radio" name="classe" value="Callse C" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Classe C</label></div>
-                    <div class="form-check"><input class="form-check-input" type="radio" name="classe" value="Callse B" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Classe B</label></div>
-                    <div class="form-check"><input class="form-check-input" type="radio" name="classe" value="Callse A" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Classe A</label></div>
-                    <div>
-                        <div class="mb-3 form-floating"><textarea class="form-control" id="message" data-validation-required-message="Please enter a message." required="" placeholder="Message" style="height: 150px;"></textarea><label class="form-label">Digite sua mensagem aqui...</label><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div id="success"></div>
-                    <div class="mb-3"><button class="btn btn-primary" id="sendMessageButton" type="submit" style="color: var(--bs-light);background: var(--bs-black);">Enviar</button></div>
-                </form>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-10 mx-auto">
+                    <p>O radioamadorismo é uma prática que atrai pessoas interessadas em se comunicar por meio do rádio, experimentar e adquirir conhecimentos técnicos. </p>
+                    <p>Se você quer se tornar um radioamador, mas ainda tem perguntas sobre como começar ou precisa de instruções para mudar sua classe, entre em contato conosco. Complete os campos a seguir e envie sua mensagem. Fico feliz em poder ajudar você nessa jornada!</p>
+                    <form id="contactForm" name="sentMessage" method="post">
+                        <div class="mb-3 form-floating">
+                            <input class="form-control" type="text" id="name" name="nome" required placeholder="Nome" autocomplete="name">
+                            <label for="name">Nome</label>
+                        </div>
+                        <div class="mb-3 form-floating">
+                            <input class="form-control" type="email" id="email" name="email" required placeholder="E-mail" autocomplete="email">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="mb-3 form-floating">
+                            <input class="form-control" type="tel" id="phone" name="telefone" required placeholder="Número de telefone" autocomplete="tel">
+                            <label for="phone">Número de Telefone</label>
+                        </div>
+ 
+                        <fieldset class="mb-3">
+                            <legend class="fs-6">Qual tipo de ajuda precisa?</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="ajuda" value="COER" id="ajuda-coer">
+                                <label class="form-check-label" for="ajuda-coer">Conseguir meu COER</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="ajuda" value="Atualizar classe" id="ajuda-classe">
+                                <label class="form-check-label" for="ajuda-classe">Atualizar classe</label>
+                            </div>
+                        </fieldset>
+ 
+                        <fieldset class="mb-3">
+                            <legend class="fs-6">Qual a classe de radioamador pretendida?</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="classe" value="Classe C" id="classe-c">
+                                <label class="form-check-label" for="classe-c">Classe C</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="classe" value="Classe B" id="classe-b">
+                                <label class="form-check-label" for="classe-b">Classe B</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="classe" value="Classe A" id="classe-a">
+                                <label class="form-check-label" for="classe-a">Classe A</label>
+                            </div>
+                        </fieldset>
+ 
+                        <div class="mb-3 form-floating">
+                            <textarea class="form-control" id="message" name="mensagem" required placeholder="Digite sua mensagem aqui..." style="height: 150px;"></textarea>
+                            <label for="message">Digite sua mensagem aqui...</label>
+                        </div>
+ 
+                        <p class="form-text">Usaremos seus dados apenas para responder à sua mensagem.</p>
+ 
+                        <div id="success" role="status" aria-live="polite"></div>
+                        <div class="mb-3"><button class="btn btn-primary btn-enviar" id="sendMessageButton" type="submit" method="post">Enviar</button></div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <hr>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto">
                     <ul class="list-inline text-center">
-                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></li>
-                        <li class="list-inline-item"></li>
+                        <li class="list-inline-item"><a href="https://github.com/just-a-happy-face" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -82,8 +119,7 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/clean-blog.js"></script>
-    <script src="assets/js/Lightbox-Gallery-baguetteBox.min.js"></script>
-    <script src="assets/js/Lightbox-Gallery.js"></script>
 </body>
-
+ 
 </html>
+ 
